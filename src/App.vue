@@ -4,7 +4,7 @@
 
 <template>
   <header>
-    <!-- <h1>School Grades</h1>     -->
+    <h1>School Grades</h1>    
   </header>
   <main>
 

@@ -16,8 +16,7 @@ describe('App component', () => {
 
         //when
 
-
         //then
-        expect().toBe('School Grades')
+        expect(appHeader.html({ raw: true })).toBe('<header><h1>School Grades</h1></header>')
     })
 })
