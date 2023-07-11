@@ -19,4 +19,13 @@ describe('App component', () => {
         //then
         expect(appHeader.html({ raw: true })).toBe('<header><h1>School Grades</h1></header>')
     })
+
+    test('a main tag should exist', () => {
+        const wrapper = mount(App);        
+        expect(wrapper.find('main').exists()).toBe(true)
+    })
+
+    test('child component Students should exist', () => {
+        
+    })
 })
