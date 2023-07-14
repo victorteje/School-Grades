@@ -2,7 +2,7 @@ import { describe, test, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
 
 //Components
-import App from './../../App.vue'
+import App from '../src/App.vue'
 
 describe('App component', () => {
 
