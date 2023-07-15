@@ -28,14 +28,23 @@ describe('App component', () => {
         expect(wrapper.findComponent(Students).exists()).toBe(true);
     })
 
+    test('should contain subtitle with id studentsName', () => {
+
+    })
+
     test('table headers should have class tableHeader', () => {
         const tableHeader1 = wrapper.findAll('th')[0];
         expect(tableHeader1.attributes('class')).toBe('tableHeader');
         const tableHeader2 = wrapper.findAll('th')[1];
         expect(tableHeader2.attributes('class')).toBe('tableHeader');
-        const tableHeader3 = wrapper.findAll('th')[2];
-        expect(tableHeader3.attributes('class')).toBe('tableHeader');
         // expect(tableHeader.classes()).toContain('tableHeader');
         // expect(tableHeader.classes('tableHeader')).toBe(true);
     })
+
+    test('should contain subtitle with id gradesTable', () => {
+        const studentsName = wrapper.find('h2');
+        expect(studentsName.attributes('id')).toBe('studentsName');
+    })
+
+    
 })

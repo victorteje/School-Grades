@@ -8,8 +8,10 @@
   </header>
   <main>
     <Students/>
+    <h2 id="studentsName">
+      student's name goes here
+    </h2>
     <tr id="gradesTable">
-      <th class="tableHeader">Student</th>
       <th class="tableHeader">Subject</th>
       <th class="tableHeader">Grade</th>
     </tr>
