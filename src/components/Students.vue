@@ -3,6 +3,10 @@
     const selectStudent = ref('');
     const selectSubject = ref('');
     const selectGrade = ref('');
+
+    const submit = () => {
+        
+    }
 </script>
 
 <template>
@@ -35,7 +39,8 @@
         <option>9</option>
         <option>10</option>
     </select>
-    <h2 id="studentsName">{{ selectStudent }}</h2>
+    <button id="submit" @click="submit()">Submit</button>
+    <!-- <h2 id="studentsName">{{ selectStudent }}</h2> -->
 </template>
 
 <style scoped>

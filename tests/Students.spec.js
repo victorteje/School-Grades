@@ -8,9 +8,9 @@ describe('Students component', () => {
 
     const wrapper = mount(Students);
 
-    test('should contain subtitle with id studentsName', () => {
-        const studentsName = wrapper.find('h2');
-        expect(studentsName.attributes('id')).toBe('studentsName');
+    test('should contain button with id submit', () => {
+        const studentsName = wrapper.find('button');
+        expect(studentsName.attributes('id')).toBe('submit');
     })
 
 })
