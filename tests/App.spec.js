@@ -6,13 +6,12 @@ import App from '../src/App.vue'
 import Students from '../src/components/Students.vue'
 
 describe('App component', () => {
+    //given
+    const wrapper = mount(App);
+    // console.log(wrapper);
 
     test('should contain a header with title School Grades', () => {
-
         //given
-        const wrapper = mount(App);
-        // console.log(wrapper);
-
         const appHeader = wrapper.find('header');
 
         //when
@@ -22,13 +21,17 @@ describe('App component', () => {
     })
 
     test('a main tag should exist', () => {
-        const wrapper = mount(App);        
         expect(wrapper.find('main').exists()).toBe(true);
     })
 
     test('child component Students should exist', () => {
-        const wrapper = mount(App);
-        expect(wrapper.findComponent(Students).exists()).toBe(true)
-        // expect(wrapper.findComponent({ name: "Students" }).exists()).toBe(true)
+        expect(wrapper.findComponent(Students).exists()).toBe(true);
+    })
+
+    test('table headers should have class tableHeader', () => {
+        const tableHeader = wrapper.find('th');
+        expect(tableHeader.attributes('class')).toBe('tableHeader');
+        // expect(tableHeader.classes()).toContain('tableHeader');
+        // expect(tableHeader.classes('tableHeader')).toBe(true);
     })
 })

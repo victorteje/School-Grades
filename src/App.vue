@@ -8,6 +8,11 @@
   </header>
   <main>
     <Students/>
+    <tr id="gradesTable">
+      <th class="tableHeader">Student</th>
+      <th class="tableHeader">Subject</th>
+      <th class="tableHeader">Grade</th>
+    </tr>
   </main>
 </template>
 
