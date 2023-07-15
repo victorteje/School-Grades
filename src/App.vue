@@ -8,7 +8,6 @@
   </header>
   <main>
     <Students/>
-    <h2 id="studentsName">{{ selected }}</h2>
     <tr id="gradesTable">
       <th class="tableHeader">Subject</th>
       <th class="tableHeader">Grade</th>

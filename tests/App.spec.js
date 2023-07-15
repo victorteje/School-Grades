@@ -28,10 +28,6 @@ describe('App component', () => {
         expect(wrapper.findComponent(Students).exists()).toBe(true);
     })
 
-    test('should contain subtitle with id studentsName', () => {
-
-    })
-
     test('table headers should have class tableHeader', () => {
         const tableHeader1 = wrapper.findAll('th')[0];
         expect(tableHeader1.attributes('class')).toBe('tableHeader');
@@ -41,10 +37,4 @@ describe('App component', () => {
         // expect(tableHeader.classes('tableHeader')).toBe(true);
     })
 
-    test('should contain subtitle with id gradesTable', () => {
-        const studentsName = wrapper.find('h2');
-        expect(studentsName.attributes('id')).toBe('studentsName');
-    })
-
-    
 })
