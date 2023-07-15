@@ -29,8 +29,12 @@ describe('App component', () => {
     })
 
     test('table headers should have class tableHeader', () => {
-        const tableHeader = wrapper.find('th');
-        expect(tableHeader.attributes('class')).toBe('tableHeader');
+        const tableHeader1 = wrapper.findAll('th')[0];
+        expect(tableHeader1.attributes('class')).toBe('tableHeader');
+        const tableHeader2 = wrapper.findAll('th')[1];
+        expect(tableHeader2.attributes('class')).toBe('tableHeader');
+        const tableHeader3 = wrapper.findAll('th')[2];
+        expect(tableHeader3.attributes('class')).toBe('tableHeader');
         // expect(tableHeader.classes()).toContain('tableHeader');
         // expect(tableHeader.classes('tableHeader')).toBe(true);
     })
