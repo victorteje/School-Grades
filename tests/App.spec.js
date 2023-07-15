@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 
 //Components
 import App from '../src/App.vue'
+import Students from '../src/components/Students.vue'
 
 describe('App component', () => {
 
@@ -17,15 +18,17 @@ describe('App component', () => {
         //when
 
         //then
-        expect(appHeader.html({ raw: true })).toBe('<header><h1>School Grades</h1></header>')
+        expect(appHeader.html({ raw: true })).toBe('<header><h1>School Grades</h1></header>');
     })
 
     test('a main tag should exist', () => {
         const wrapper = mount(App);        
-        expect(wrapper.find('main').exists()).toBe(true)
+        expect(wrapper.find('main').exists()).toBe(true);
     })
 
     test('child component Students should exist', () => {
-        
+        const wrapper = mount(App);
+        expect(wrapper.findComponent(Students).exists()).toBe(true)
+        // expect(wrapper.findComponent({ name: "Students" }).exists()).toBe(true)
     })
 })

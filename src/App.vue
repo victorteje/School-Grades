@@ -1,5 +1,5 @@
 <script setup>
-
+  import Students from './components/Students.vue'
 </script>
 
 <template>
@@ -7,7 +7,7 @@
     <h1>School Grades</h1>    
   </header>
   <main>
-
+    <Students/>
   </main>
 </template>
 
