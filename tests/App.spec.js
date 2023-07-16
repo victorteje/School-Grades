@@ -39,7 +39,7 @@ describe('App component', () => {
 
     // test('should show the name of the student once the button is clicked', () => {
         // wrapper.find('button').trigger('click');
-        // const studentsName = wrapper.find('h2');
-        // expect(studentsName.html).not.toBe("Student's name goes here");
+        // const studentsName = wrapper.find('th');
+        // expect(studentsName.html).not.toBe("Student");
     // })
 })

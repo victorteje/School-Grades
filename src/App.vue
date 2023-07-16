@@ -5,7 +5,6 @@
 
     const studentsName = document.getElementById("studentsName");
     studentsName.innerHTML = data[0].value;
-    studentsName.style.opacity = "1";
 
     const gradesTable = document.getElementById("gradesTable");
     const newRow = document.createElement("tr");
@@ -60,8 +59,10 @@
     </header>
     <main>
       <Students  @send-data="addData"/>
-      <h2 id="studentsName">Student's name goes here</h2>
       <table id="gradesTable">
+        <tr>
+          <th id="studentsName" colspan="2">Student</th>
+        </tr>
         <tr>
           <th class="tableHeader">Subject</th>
           <th class="tableHeader">Grade</th>
@@ -92,8 +93,8 @@
     padding-top: 3vh;
   }
 
-  h2 {
-    opacity: 0;
+  table {
+    margin-top: 5vh;
   }
 
   th, td {
@@ -107,4 +108,8 @@
     background-color: #abc4ff;
   }
   
+  #studentsName {
+    font-size: larger;
+  }
+
 </style>
