@@ -4,8 +4,6 @@
     const subject = ref('');
     const grade = ref('');
     const studentData = [student, subject, grade];
-    // const emit = defineEmits(['student', 'subject', 'grade']);
-    // const studentData = ref([student.value, subject.value, grade.value]);
 </script>
 
 <template>
@@ -37,9 +35,8 @@
             <option>9</option>
             <option>10</option>
         </select>
-        <button id="submit" @click="$emit('sendData', studentData)">Submit</button>
+        <button id="submit" @click.prevent="$emit('sendData', studentData)">Submit</button>
     </form>
-    <!-- <h2 id="studentsName">{{ student }}</h2> -->
 </template>
 
 <style scoped>

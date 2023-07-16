@@ -2,6 +2,7 @@
   import Students from './components/Students.vue';
   
   const addData = (data) => {
+
     const studentsName = document.getElementById("studentsName");
     studentsName.innerHTML = data[0].value;
 
@@ -12,10 +13,11 @@
     const newSubject = document.createElement("td");
     newSubject.innerHTML = data[1].value;
     newRow.appendChild(newSubject);
-    
+
     const newGrade = document.createElement("td");
     newGrade.innerHTML = data[2].value;
     newRow.appendChild(newGrade);
+
   }
 </script>
 
@@ -31,10 +33,6 @@
         <tr>
           <th class="tableHeader">Subject</th>
           <th class="tableHeader">Grade</th>
-        </tr>
-        <tr>
-          <td>Placeholder</td>
-          <td>Placeholder</td>
         </tr>
       </table>
     </main>
