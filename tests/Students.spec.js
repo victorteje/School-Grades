@@ -13,4 +13,9 @@ describe('Students component', () => {
         expect(studentsName.attributes('id')).toBe('submit');
     })
 
+    test('button emits an event when clicked', () => {    
+        wrapper.find('button').trigger('click');      
+        expect(wrapper.emitted()).toHaveProperty('sendData');
+    })
+
 })

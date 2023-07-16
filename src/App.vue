@@ -5,6 +5,7 @@
 
     const studentsName = document.getElementById("studentsName");
     studentsName.innerHTML = data[0].value;
+    studentsName.style.opacity = "1";
 
     const gradesTable = document.getElementById("gradesTable");
     const newRow = document.createElement("tr");
@@ -15,9 +16,40 @@
     newRow.appendChild(newSubject);
 
     const newGrade = document.createElement("td");
-    newGrade.innerHTML = data[2].value;
-    newRow.appendChild(newGrade);
+    const numberGrade = data[2].value;
+    let letterGrade;
 
+      if (numberGrade < 3) {
+        letterGrade = 'F-';
+        newGrade.innerHTML = letterGrade;
+      }
+
+      else if (numberGrade < 5) {
+        letterGrade = 'F';
+        newGrade.innerHTML = letterGrade;
+      }
+
+      else if (numberGrade < 6) {
+        letterGrade = 'D';
+        newGrade.innerHTML = letterGrade;
+      }
+
+      else if (numberGrade < 7) {
+        letterGrade = 'C';
+        newGrade.innerHTML = letterGrade;
+      }
+
+      else if (numberGrade < 9) {
+        letterGrade = 'B';
+        newGrade.innerHTML = letterGrade;
+      }
+
+      else {
+        letterGrade = 'A';
+        newGrade.innerHTML = letterGrade;
+      }
+    
+    newRow.appendChild(newGrade);
   }
 </script>
 
@@ -28,7 +60,7 @@
     </header>
     <main>
       <Students  @send-data="addData"/>
-      <h2 id="studentsName"></h2>
+      <h2 id="studentsName">Student's name goes here</h2>
       <table id="gradesTable">
         <tr>
           <th class="tableHeader">Subject</th>
@@ -58,6 +90,10 @@
   h1 {
     text-align: center;
     padding-top: 3vh;
+  }
+
+  h2 {
+    opacity: 0;
   }
 
   th, td {
