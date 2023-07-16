@@ -1,15 +1,18 @@
 <script setup>
   import Students from './components/Students.vue';
-  // import { ref } from 'vue';
-  // const studentData = ref('');
+  
   const addData = (data) => {
     const studentsName = document.getElementById("studentsName");
     studentsName.innerHTML = data[0].value;
+
+    const gradesTable = document.getElementById("gradesTable");
     const newRow = document.createElement("tr");
-    document.table.appendChild(newRow);
+    gradesTable.appendChild(newRow);
+
     const newSubject = document.createElement("td");
     newSubject.innerHTML = data[1].value;
     newRow.appendChild(newSubject);
+    
     const newGrade = document.createElement("td");
     newGrade.innerHTML = data[2].value;
     newRow.appendChild(newGrade);

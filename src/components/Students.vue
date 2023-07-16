@@ -43,6 +43,7 @@
 </template>
 
 <style scoped>
+
     form {
         display: flex;
         gap: 24px;
@@ -52,4 +53,5 @@
         border-radius: 4px;
         padding: 2px 8px;
     }
+    
 </style>
