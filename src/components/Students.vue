@@ -3,7 +3,7 @@
     const student = ref('');
     const subject = ref('');
     const grade = ref('');
-    const studentData = [student.value, subject.value, grade.value];
+    const studentData = [student, subject, grade];
     // const emit = defineEmits(['student', 'subject', 'grade']);
     // const studentData = ref([student.value, subject.value, grade.value]);
 </script>
@@ -20,10 +20,8 @@
             <option disabled value="">Select a subject</option>
             <option>HTML + CSS</option>
             <option>JavaScript</option>
-            <option>Vue</option>
-            <option>React</option>
+            <option>Vue.js</option>
             <option>Java</option>
-            <option>PHP</option>
         </select>
         <select id="grade" v-model="grade">
             <option disabled value="">Select the student's grade</option>
