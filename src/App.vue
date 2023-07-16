@@ -38,7 +38,7 @@
   </body>
 </template>
 
-<style scoped>
+<style>
 
   body {
     background: linear-gradient(to bottom right, #edf2fb, #ccdbfd);
