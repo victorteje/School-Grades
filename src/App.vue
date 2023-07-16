@@ -1,12 +1,18 @@
 <script setup>
-  import Students from './components/Students.vue'
+  import Students from './components/Students.vue';
   import { ref } from 'vue';
   const studentData = ref('');
-  const addData = (data) => {
-
+  const addData = () => {
+    const studentsName = document.getElementById("studentsName");
+    studentsName.innerText = studentData[0];
     const newRow = document.createElement("tr");
-    
-
+    document.table.appendChild(newRow);
+    const newSubject = document.createElement("td");
+    newSubject.innerHTML = studentData[1];
+    newRow.appendChild(newSubject);
+    const newGrade = document.createElement("td");
+    newGrade.innerHTML = studentData[2];
+    newRow.appendChild(newGrade);
   }
 </script>
 
@@ -24,8 +30,8 @@
           <th class="tableHeader">Grade</th>
         </tr>
         <tr>
-          <td>Prueba</td>
-          <td>Prueba</td>
+          <td>Placeholder</td>
+          <td>Placeholder</td>
         </tr>
       </table>
     </main>
@@ -33,7 +39,6 @@
 </template>
 
 <style scoped>
-
 
   body {
     background: linear-gradient(to bottom right, #edf2fb, #ccdbfd);
@@ -62,6 +67,5 @@
   th {
     background-color: #abc4ff;
   }
-
-
+  
 </style>
