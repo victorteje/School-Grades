@@ -49,6 +49,7 @@
     button {
         border-radius: 4px;
         padding: 2px 8px;
+        font-weight: bold;
     }
     
 </style>

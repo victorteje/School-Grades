@@ -55,19 +55,23 @@
 <template>
   <body>
     <header>
-      <h1>School Grades</h1>    
+      <h1>School Grades</h1>         
     </header>
     <main>
       <Students  @send-data="addData"/>
-      <table id="gradesTable">
-        <tr>
-          <th id="studentsName" colspan="2">Student</th>
-        </tr>
-        <tr>
-          <th class="tableHeader">Subject</th>
-          <th class="tableHeader">Grade</th>
-        </tr>
-      </table>
+      <!-- <section>
+        <img src="./assets/pencil-teacher.png" alt="Pencil teacher"> -->
+        <table id="gradesTable">
+          <tr>
+            <th id="studentsName" colspan="2">Student</th>
+          </tr>
+          <tr>
+            <th class="tableHeader">Subject</th>
+            <th class="tableHeader">Grade</th>
+          </tr>
+        </table>
+        <!-- <img src="./assets/pencil-student.png" alt="Pencil student">
+      </section> -->
     </main>
   </body>
 </template>
@@ -81,17 +85,27 @@
     margin: 0;
   }
 
+  h1 {
+    text-align: center;
+    padding-top: 3vh;
+  }
+  
   main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
-  h1 {
-    text-align: center;
-    padding-top: 3vh;
+  
+  /* section {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
   }
+
+  img {
+    height: 16vh;
+  } */
 
   table {
     margin-top: 5vh;
@@ -101,7 +115,7 @@
     text-align: center;
     border: 1px solid;
     padding: 8px 16px;
-    width: 14vw;
+    width: 12vw;
   }
 
   th {
