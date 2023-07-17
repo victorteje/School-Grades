@@ -1,6 +1,8 @@
 # School Grades
 
-Vitest practice exercise.
+Vue 3 + Vitest practice exercise.
+
+Select a student, subject and numeric grade and click on 'Submit'. The table will show the corresponding letter grade, ranging from F- to A.
 
 
 ## Project Setup
