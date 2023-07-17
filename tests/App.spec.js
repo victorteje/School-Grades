@@ -17,7 +17,7 @@ describe('App component', () => {
         //when
 
         //then
-        expect(appHeader.html({ raw: true })).toBe('<header><h1>School Grades</h1></header>');
+        expect(appHeader.html({ raw: true })).toBe('<header><img src="/src/assets/blackboard.png" alt="Blackboard image"><h1>School Grades</h1></header>');
     })
 
     test('a main tag should exist', () => {
@@ -33,13 +33,8 @@ describe('App component', () => {
         expect(tableHeader1.attributes('class')).toBe('tableHeader');
         const tableHeader2 = wrapper.findAll('th')[1];
         expect(tableHeader2.attributes('class')).toBe('tableHeader');
-        // expect(tableHeader.classes()).toContain('tableHeader');
-        // expect(tableHeader.classes('tableHeader')).toBe(true);
+        const tableHeader3 = wrapper.findAll('th')[1];
+        expect(tableHeader3.attributes('class')).toBe('tableHeader');
     })
 
-    // test('should show the name of the student once the button is clicked', () => {
-        // wrapper.find('button').trigger('click');
-        // const studentsName = wrapper.find('th');
-        // expect(studentsName.html).not.toBe("Student");
-    // })
 })
