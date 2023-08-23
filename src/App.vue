@@ -93,6 +93,12 @@
     width: 10vw;
   }
 
+  @media only screen and (max-width: 600px) {
+    img {
+      width: 30vw;
+    }
+  }
+
   h1 {
     text-align: center;
     padding-top: 3vh;
@@ -116,6 +122,12 @@
     padding: 8px 16px;
     width: 12vw;
   }
+
+  @media only screen and (max-width: 600px) {
+    th, td {
+      width: 32vw;
+    }
+  }  
 
   th {
     background-color: #abc4ff;

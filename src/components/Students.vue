@@ -16,10 +16,16 @@
         </select>
         <select id="subject" v-model="subject">
             <option disabled value="">Select a subject</option>
-            <option>HTML + CSS</option>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>Sass</option>
+            <option>Bootstrap</option>
+            <option>Tailwind</option>
             <option>JavaScript</option>
             <option>Vue.js</option>
+            <option>Vuetify</option>
             <option>Java</option>
+            <option>Spring Boot</option>
         </select>
         <select id="grade" v-model="grade">
             <option disabled value="">Select the student's grade</option>
@@ -44,6 +50,12 @@
     form {
         display: flex;
         gap: 24px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        form {
+            flex-direction: column;        
+        }
     }
 
     button {
