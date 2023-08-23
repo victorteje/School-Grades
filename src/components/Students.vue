@@ -54,7 +54,8 @@
 
     @media only screen and (max-width: 600px) {
         form {
-            flex-direction: column;        
+            flex-direction: column;   
+            gap: 40px;     
         }
     }
 
